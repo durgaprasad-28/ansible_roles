@@ -1,2 +1,11 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
+MONGODB_HOST: mongodb-dev.durgarasad.online
+CATALOGUE_HOST: catalogue-dev.durgarasad.online
+REDIS_HOST: redis-dev.durgarasad.online
+USER_HOST: user-dev.durgarasad.online
+CART_HOST: cart-dev.durgarasad.online
+MYSQL_HOST: mysql-dev.durgarasad.online
+SHIPPING_HOST: shipping-dev.durgarasad.online
+RABBITMQ_HOST: rabbitmq-dev.durgarasad.online
+PAYMENT_HOST: payment-dev.durgarasad.online

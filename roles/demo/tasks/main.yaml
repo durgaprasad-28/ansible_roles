@@ -1,3 +1,0 @@
-- name: printing from the tasks
-  ansible.builtin.debug:
-   msg: "hello from the roles,demo,tasks"

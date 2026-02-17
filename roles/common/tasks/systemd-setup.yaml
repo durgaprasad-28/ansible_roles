@@ -1,0 +1,9 @@
+- name: copy {{ server }} service
+  ansible.builtin.template:
+    src: "{{ server }}.service.j2"
+    dest: "/etc/systemd/system/{{ server }}.service"
+  notify: restart "{{ server }}"
+
+- name: daemon reload
+  ansible.builtin.systemd_service:
+    daemon_reload: true
