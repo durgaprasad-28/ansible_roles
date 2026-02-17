@@ -1,20 +1,14 @@
-- name: app setup
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: app-setup.yaml
+[Unit]
+Description = Cart Service
+[Service]
+User=roboshop
+// highlight-start
+Environment=REDIS_HOST="{{ REDIS_HOST }}"
+Environment=CATALOGUE_HOST="{{ CATALOGUE_HOST }}"
+Environment=CATALOGUE_PORT=8080
+// highlight-end
+ExecStart=/bin/node /app/server.js
+SyslogIdentifier=cart
 
-- name: nodejs setup
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: nodejs-setup.yaml
-
-- name: systemd setup
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: systemd-setup.yaml
-
-- name: start user
-  ansible.builtin.service:
-    name: user
-    state: restarted
-    enabled: yes
+[Install]
+WantedBy=multi-user.target
