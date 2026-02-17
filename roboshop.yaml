@@ -1,0 +1,5 @@
+- name : executing the servers
+  hosts: "{{ server }}"
+  become: yes
+  roles: 
+  - "{{ server }}"
