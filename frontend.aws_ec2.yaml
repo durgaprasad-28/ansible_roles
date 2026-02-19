@@ -7,4 +7,4 @@ filters:
  instance-state-name: running
  tag:Name: ansible-dev
 keyed_groups:
-- key: tags.Name 
+- key: tags.server
