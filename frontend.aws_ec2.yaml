@@ -5,7 +5,9 @@ hostnames:
 - private-ip-address
 filters:
  instance-state-name: running
- "tag:Name": ansible-dev
+ tag:Name: ansible
+compose:
+ ansible_host: private_ip_address  
 keyed_groups:
 - separator: ' '
-  key: tags.server
+  key: tags.Name
