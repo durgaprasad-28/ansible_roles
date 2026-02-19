@@ -1,11 +1,11 @@
 plugin: amazon.aws.aws_ec2
-region: 
+regions: 
 - us-east-1
 hostnames:
 - private-ip-address
 filters:
  instance-state-name: running
- tag:Name: ansible-dev
+ "tag:Name": ansible-dev
 keyed_groups:
-- seperator: ' '
+- separator: ' '
   key: tags.server
